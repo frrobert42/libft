@@ -6,7 +6,7 @@
 #    By: frrobert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 10:24:23 by frrobert          #+#    #+#              #
-#    Updated: 2018/11/11 12:20:58 by frrobert         ###   ########.fr        #
+#    Updated: 2018/11/11 15:41:57 by frrobert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -125,3 +125,7 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+norme:
+	norminette $(SRCS)
+	norminette $(INC_PATH)*.h

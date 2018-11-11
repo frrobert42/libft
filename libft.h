@@ -6,7 +6,7 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:22:42 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/11 12:32:56 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/11 16:36:27 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int				ft_isalpha(int c);
 int				ft_isascii(int c);
 int				ft_isdigit(int c);
 int				ft_isprint(int c);
+char			*ft_itoa(int n);
 void			*ft_memalloc(size_t size);
 void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
@@ -62,7 +63,9 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dest, const char *src, unsigned int n);
 char			*ft_strnew(size_t size);
 int				ft_strnequ(char const *s1, char const *s2, size_t n);
+char			**ft_strsplit(char const *s, char c);
 char			*ft_strstr(const char *haystack, const char *needle);
+char			*ft_strtrim(char const *s);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 int				ft_tolower(int c);
 int				ft_toupper(int c);
