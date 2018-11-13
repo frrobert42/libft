@@ -6,7 +6,7 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/10 09:18:24 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/10 11:04:11 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/12 13:00:40 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striter(char *s, void (*f)(char *))
 {
-	if (s == NULL)
+	if (!s || !f)
 		return ;
 	while (*s)
 		f(s++);

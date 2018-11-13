@@ -6,7 +6,7 @@
 #    By: frrobert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 10:24:23 by frrobert          #+#    #+#              #
-#    Updated: 2018/11/11 15:41:57 by frrobert         ###   ########.fr        #
+#    Updated: 2018/11/12 14:00:23 by frrobert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ OBJ = ft_atoi.o \
 	  ft_isascii.o \
 	  ft_isdigit.o \
 	  ft_isprint.o \
+	  ft_itoa.o \
 	  ft_memalloc.o \
 	  ft_memccpy.o \
 	  ft_memchr.o \
@@ -58,8 +59,10 @@ OBJ = ft_atoi.o \
 	  ft_strnew.o \
 	  ft_strnequ.o \
 	  ft_strnstr.o \
+	  ft_strsplit.o \
 	  ft_strstr.o \
 	  ft_strsub.o \
+	  ft_strtrim.o \
 	  ft_tolower.o \
 	  ft_toupper.o 
 SRCS = ft_atoi.c \
@@ -69,6 +72,7 @@ SRCS = ft_atoi.c \
 	   ft_isascii.c \
 	   ft_isdigit.c \
 	   ft_isprint.c \
+	   ft_itoa.c \
 	   ft_memalloc.c \
 	   ft_memccpy.c \
 	   ft_memchr.c \
@@ -107,8 +111,10 @@ SRCS = ft_atoi.c \
 	   ft_strnew.c \
 	   ft_strnequ.c \
 	   ft_strnstr.c \
+	   ft_strsplit.c \
 	   ft_strstr.c \
 	   ft_strsub.c \
+	   ft_strtrim.c \
 	   ft_tolower.c \
 	   ft_toupper.c
 
@@ -119,13 +125,9 @@ $(NAME): $(OBJ)
 	ranlib $(NAME)
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $(OBJ)
 
 fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
-
-norme:
-	norminette $(SRCS)
-	norminette $(INC_PATH)*.h

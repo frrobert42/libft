@@ -6,30 +6,25 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:08:17 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/09 14:56:53 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/13 13:31:02 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "libft.h"
-
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size)
+size_t  ft_strlcat(char *dst, const char *src, size_t size)
 {
-	int				index;
-	unsigned int	length_dest;
-	unsigned int	length_src;
-
-	index = 0;
-	length_dest = ft_strlen(dest);
-	length_src = ft_strlen(src);
-	if (!size)
-		return (0);
-	if (size - 1 < length_dest)
-		return (length_src + size);
-	while (length_dest + index < size - 1)
-	{
-		dest[length_dest + index] = src[index];
-		index++;
-	}
-	dest[length_dest + index] = '\0';
-	return (length_dest + length_src);
+	char    *d;
+	char    *s;
+	size_t  dst_length;
+	size_t  len;
+	if (!(d = (char*)ft_memchr(dst, '\0', size)))
+		return (size + ft_strlen(src));
+	s = (char*)src;
+	d = (char*)dst;
+	dst_length = ft_strlen(dst);
+	len = dst_length + ft_strlen(s);
+	d = d + dst_length;
+	while (dst_length++ < size - 1 && s)
+		*d++ = *s++;
+	*d = '\0';
+	return (len);
 }

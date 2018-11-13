@@ -1,20 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnequ.c                                       :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/10 10:09:42 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/12 13:03:09 by frrobert         ###   ########.fr       */
+/*   Created: 2018/11/12 08:54:03 by frrobert          #+#    #+#             */
+/*   Updated: 2018/11/12 10:53:00 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strnequ(char const *s1, char const *s2, size_t n)
+static size_t	lenght(int n)
 {
-	if (!s1 || !s2)
-		return (0);
-	return (!ft_strncmp(s1, s2, n));
+	size_t i;
+
+	i = 1;
+	while (n /= 10)
+		i++;
+	return (i);
+}
+
+char			*ft_itoa(int n)
+{
+	char			*str;
+	size_t			len;
+	unsigned int	ntemp;
+
+	len = lenght(n);
+	ntemp = n;
+	if (n < 0)
+	{
+		ntemp = -n;
+		len++;
+	}
+	if (!(str = ft_strnew(len)))
+		return (NULL);
+	str[--len] = ntemp % 10 + '0';
+	while (ntemp /= 10)
+		str[--len] = ntemp % 10 + '0';
+	if (n < 0)
+		*(str + 0) = '-';
+	return (str);
 }

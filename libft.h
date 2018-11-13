@@ -6,7 +6,7 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:22:42 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/11 16:36:27 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/13 13:32:57 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 
-int				ft_atoi(char *str);
+int				ft_atoi(const char *str);
 void			ft_bzero(void *s, size_t n);
 int				ft_isalnum(int c);
 int				ft_isalpha(int c);
@@ -55,8 +55,8 @@ int				ft_strcmp(const char *s1, const char *s2);
 char			*ft_strcpy(char *dest, const char *src);
 char			*ft_strdup(char *src);
 char			*ft_strjoin(char const *s1, char const *s2);
-unsigned int	ft_strlcat(char *dest, char *src, unsigned int size);
-int				ft_strlen(char *str);
+size_t			ft_strlcat(char *dest, const char *src, size_t size);
+int				ft_strlen(const char *str);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
