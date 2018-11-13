@@ -6,16 +6,19 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/08 13:08:17 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/13 13:31:02 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/13 13:51:02 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
-size_t  ft_strlcat(char *dst, const char *src, size_t size)
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	char    *d;
-	char    *s;
-	size_t  dst_length;
-	size_t  len;
+	char	*d;
+	char	*s;
+	size_t	dst_length;
+	size_t	len;
+
 	if (!(d = (char*)ft_memchr(dst, '\0', size)))
 		return (size + ft_strlen(src));
 	s = (char*)src;
