@@ -6,7 +6,7 @@
 #    By: frrobert <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/07 10:24:23 by frrobert          #+#    #+#              #
-#    Updated: 2018/11/12 14:00:23 by frrobert         ###   ########.fr        #
+#    Updated: 2018/11/14 09:36:25 by frrobert         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,12 @@ OBJ = ft_atoi.o \
 	  ft_isdigit.o \
 	  ft_isprint.o \
 	  ft_itoa.o \
+	  ft_lstadd.o \
+	  ft_lstdel.o \
+	  ft_lstdelone.o \
+	  ft_lstiter.o \
+	  ft_lstmap.o \
+	  ft_lstnew.o \
 	  ft_memalloc.o \
 	  ft_memccpy.o \
 	  ft_memchr.o \
@@ -73,6 +79,12 @@ SRCS = ft_atoi.c \
 	   ft_isdigit.c \
 	   ft_isprint.c \
 	   ft_itoa.c \
+	   ft_lstadd.o \
+	   ft_lstdel.o \
+	   ft_lstdelone.o \
+	   ft_lstiter.o \
+	   ft_lstmap.o \
+	   ft_lstnew.o \
 	   ft_memalloc.c \
 	   ft_memccpy.c \
 	   ft_memchr.c \
