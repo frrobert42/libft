@@ -6,7 +6,7 @@
 /*   By: frrobert <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 10:22:42 by frrobert          #+#    #+#             */
-/*   Updated: 2018/11/13 13:57:22 by frrobert         ###   ########.fr       */
+/*   Updated: 2018/11/14 08:43:26 by frrobert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ typedef struct		s_list
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}					t_lis;
+}					t_list;
 
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, size_t n);
